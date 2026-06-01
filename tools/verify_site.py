@@ -13,6 +13,11 @@ def main():
     page_count = 0
     item_count = 0
     expected_images = set()
+    expected_pages = {page["file"] for page in data["pages"]}
+
+    for html_path in (ROOT / "products").glob("*.html"):
+        if html_path.name not in expected_pages:
+            errors.append(f"Stale product page: {html_path}")
 
     for page in data["pages"]:
         page_count += 1

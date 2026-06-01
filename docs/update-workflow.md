@@ -34,6 +34,7 @@ tools/product_data.json
 3. 用 Drive folder title 對應 `product_data.json` 內既有頁面：
    - 優先用 `folder_id` 配對。
    - 若是新 folder，新增一個 `pages[]` entry。
+   - 若 folder 內沒有圖片，該系列不放入 `pages[]`，並在重建時清走舊頁面、舊圖片及 link。
 4. 對每張圖片：
    - `code` 使用檔名主體，例如 `A01_CP.png` -> `A01_CP`。
    - `drive_id` 使用該 Drive file ID。
@@ -51,6 +52,7 @@ tools/product_data.json
    - HTML 不應使用 `drive.google.com/thumbnail` 作圖片來源。
    - 每個產品卡顯示「編號」，不顯示副檔名。
    - `assets/images/` 有對應 `480/720/960.webp`。
+   - `products/` 和 `assets/images/` 不應保留 manifest 以外的舊頁面或舊圖片。
    - 或直接執行：
 
 ```powershell

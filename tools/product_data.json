@@ -53,7 +53,7 @@
       "folder_id": "1mDsJE25_Qqe6EGmlHBhQknZi9KDTAFRj",
       "title": "眼鏡布_名畫喵系列",
       "meta": [
-        "共 13 款",
+        "共 12 款",
         "眼鏡布",
         "名畫喵系列"
       ],
@@ -69,8 +69,7 @@
         { "code": "A08_CP", "drive_id": "1MmZ2p4O49EMK-TeyqAYqnsbIUq5JIler" },
         { "code": "A09_CP", "drive_id": "1SGEWcpGz_OqRXrWisngxPGtkynuuu65u" },
         { "code": "A10_CP", "drive_id": "1j996BarcQnxnIZsm-y1XLJ_yjO5GOkln" },
-        { "code": "A11_CP", "drive_id": "1sIGTTeRK7tagSGIla-tFZnL8v0KXwJzF" },
-        { "code": "封面", "drive_id": "1_ZHEBgU3CFh7JqrEFc0VQj-1GJQM9lyC" }
+        { "code": "A11_CP", "drive_id": "1sIGTTeRK7tagSGIla-tFZnL8v0KXwJzF" }
       ]
     },
     {
@@ -78,14 +77,13 @@
       "folder_id": "1KWBUFx-OURPxBphgjAeS9Qp8Q16TK5_L",
       "title": "眼鏡布_犬雕像系列",
       "meta": [
-        "共 3 款",
+        "共 2 款",
         "眼鏡布",
         "犬雕像系列"
       ],
       "items": [
         { "code": "C01_SE", "drive_id": "15x5r9C2UOPRLFdP1umjuG-r-ruEGA_Sc" },
-        { "code": "C01_VE", "drive_id": "15ENuQuooqszptivo_WQjZQ7nFAoxXagK" },
-        { "code": "封面", "drive_id": "1Z5my_p6e10MKikUyOUBxWZvT6oEt9l8C" }
+        { "code": "C01_VE", "drive_id": "15ENuQuooqszptivo_WQjZQ7nFAoxXagK" }
       ]
     },
     {
@@ -106,7 +104,7 @@
       "folder_id": "1wBmyxyP4usb-PMyf4Qu2tdF7HIwtAIFy",
       "title": "蝶古巴特木杯墊",
       "meta": [
-        "共 7 款",
+        "共 6 款",
         "蝶古巴特木杯墊"
       ],
       "items": [
@@ -115,8 +113,7 @@
         { "code": "CB003", "drive_id": "1dsp-WQt4maEzVUnazQyiQrgPYYYP5-8u" },
         { "code": "CB004", "drive_id": "1U5vnUy-u2on5u8yXeMLbUEiIJQLhBQvG" },
         { "code": "CB005", "drive_id": "13qohoyYiUdmDbdKsy_CIoxt6yHux1rdQ" },
-        { "code": "CB006", "drive_id": "1MKnCRr-fDhlOSNayyfymyH8UUfSMAD81" },
-        { "code": "GCC", "drive_id": "1VUiDdHC4yS0zGHOIB3wuQvKxgF1uHtSq" }
+        { "code": "CB006", "drive_id": "1MKnCRr-fDhlOSNayyfymyH8UUfSMAD81" }
       ]
     },
     {
@@ -148,18 +145,6 @@
       ]
     },
     {
-      "file": "pressed-flower-hair-ties.html",
-      "folder_id": "1y8Xb7bpDYS5bNrT0x8cglNlZ7Lx0cbBJ",
-      "title": "押花髮圈",
-      "meta": [
-        "共 1 款",
-        "押花髮圈"
-      ],
-      "items": [
-        { "code": "封面", "drive_id": "1WxgGRf9-mkkV2b60Dvkrtge_k38hMFep" }
-      ]
-    },
-    {
       "file": "decoupage-pen-holder.html",
       "folder_id": "1uK5EY3Y20e8qXpqgKV5UFTRKyZ8fPbMY",
       "title": "蝶古巴特筆筒",
@@ -185,20 +170,6 @@
       ]
     },
     {
-      "file": "decoupage-a4-bag.html",
-      "folder_id": "12GZiE-zQOz49Tn4aFhYfGU5fpsH0HV3P",
-      "title": "蝶古巴特麻布袋_A4",
-      "meta": [
-        "共 2 款",
-        "蝶古巴特麻布袋",
-        "A4"
-      ],
-      "items": [
-        { "code": "BGA4_001", "drive_id": "1f4X97CDmFkPWmU49sh9GrMClIq_20ybg" },
-        { "code": "封面", "drive_id": "10eG6_NUl-MEgU6Xcw7FFMqf7iOYN_pBb" }
-      ]
-    },
-    {
       "file": "decoupage-a5-bag.html",
       "folder_id": "1hOGCpqfcf5B2bqSTjRBz4hAaLwmz5CH-",
       "title": "蝶古巴特麻布袋_A5",
@@ -208,12 +179,12 @@
         "A5"
       ],
       "items": [
+        { "code": "BGA4_001", "drive_id": "1f4X97CDmFkPWmU49sh9GrMClIq_20ybg" },
         { "code": "BGA5_001", "drive_id": "1H65aoJtbrshrYfKqs8q2VaAqksDILIeB" },
         { "code": "BGA5_002", "drive_id": "1ub7s0BLakPxf0XQJP03IsmE_WuEfFWjb" },
         { "code": "BGA5_003", "drive_id": "17c8DA2ArF7wShV79reYX5HQuCZcPlbiF" },
         { "code": "BGA5_004", "drive_id": "11-klY3klWm78wEk6kDHd2jtXKURr9-Ed" },
-        { "code": "BGA5_005", "drive_id": "1w9-D5cPTTFB7drpqrhVRn_5mrOCXLIPS" },
-        { "code": "封面", "drive_id": "17q096TNS4kSw1kRhuNEUPBlnPmuFuOAp" }
+        { "code": "BGA5_005", "drive_id": "1w9-D5cPTTFB7drpqrhVRn_5mrOCXLIPS" }
       ]
     }
   ]

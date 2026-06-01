@@ -90,6 +90,10 @@ def render_page(page, order_note):
 def main():
     data = load_data()
     PRODUCT_DIR.mkdir(exist_ok=True)
+    active_files = {page["file"] for page in data["pages"]}
+    for old_page in PRODUCT_DIR.glob("*.html"):
+        if old_page.name not in active_files:
+            old_page.unlink()
     for page in data["pages"]:
         (PRODUCT_DIR / page["file"]).write_text(render_page(page, data["order_note"]), encoding="utf-8", newline="\n")
 
