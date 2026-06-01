@@ -1,14 +1,10 @@
 # Shine Online Shop Specific Product Pages
 
-This folder contains five standalone GitHub Pages product display pages for Canva Website links.
+This folder contains standalone GitHub Pages product display pages for Canva Website links.
 
 ## Pages
 
-- `products/masterpiece-cat-cloth.html`
-- `products/dog-statue-cloth.html`
-- `products/pop-up-world.html`
-- `products/pop-up-festival.html`
-- `products/pop-up-hong-kong.html`
+Product pages are generated from `tools/product_data.json` into `products/*.html`.
 
 ## Link List
 

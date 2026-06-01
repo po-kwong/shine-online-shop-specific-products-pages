@@ -1,6 +1,7 @@
 from io import BytesIO
 from pathlib import Path
 from urllib.request import Request, urlopen
+import shutil
 
 from PIL import Image
 
@@ -45,8 +46,24 @@ def optimize_item(page_file, code, file_id):
     return written
 
 
+def clean_output(data):
+    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
+    active_slugs = {page["file"].removesuffix(".html") for page in data["pages"]}
+
+    for child in OUTPUT_ROOT.iterdir():
+        if child.is_dir() and child.name not in active_slugs:
+            shutil.rmtree(child)
+
+    for page in data["pages"]:
+        out_dir = OUTPUT_ROOT / page["file"].removesuffix(".html")
+        if out_dir.exists():
+            for old_image in out_dir.glob("*.webp"):
+                old_image.unlink()
+
+
 def main():
     data = load_data()
+    clean_output(data)
     all_written = []
     for page in data["pages"]:
         for item in page["items"]:

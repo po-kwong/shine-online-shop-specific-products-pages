@@ -12,6 +12,7 @@ def main():
     errors = []
     page_count = 0
     item_count = 0
+    expected_images = set()
 
     for page in data["pages"]:
         page_count += 1
@@ -38,8 +39,15 @@ def main():
                 errors.append(f"Code {code} missing in {html_path}")
             for width in (480, 720, 960):
                 image_path = ROOT / "assets" / "images" / page_slug / f"{code}-{width}.webp"
+                expected_images.add(image_path.resolve())
                 if not image_path.exists():
                     errors.append(f"Missing optimized image: {image_path}")
+
+    images_root = ROOT / "assets" / "images"
+    if images_root.exists():
+        for image_path in images_root.rglob("*.webp"):
+            if image_path.resolve() not in expected_images:
+                errors.append(f"Stale optimized image: {image_path}")
 
     if errors:
         for error in errors:

@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from docx import Document
@@ -9,16 +10,42 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "docs" / "page-links.docx"
+DATA_PATH = ROOT / "tools" / "product_data.json"
+OUTPUT_DOCX = ROOT / "docs" / "page-links.docx"
+OUTPUT_MD = ROOT / "docs" / "page-links.md"
 
 BASE_URL = "https://jasonwongkwanho.github.io/shine-online-shop-specific-products-pages/"
-ROWS = [
-    ("眼鏡布_名畫喵系列", "products/masterpiece-cat-cloth.html", f"{BASE_URL}products/masterpiece-cat-cloth.html"),
-    ("眼鏡布_犬雕像系列", "products/dog-statue-cloth.html", f"{BASE_URL}products/dog-statue-cloth.html"),
-    ("立體咭_環球系列", "products/pop-up-world.html", f"{BASE_URL}products/pop-up-world.html"),
-    ("立體咭_節慶系列", "products/pop-up-festival.html", f"{BASE_URL}products/pop-up-festival.html"),
-    ("立體咭_港式情懷", "products/pop-up-hong-kong.html", f"{BASE_URL}products/pop-up-hong-kong.html"),
-]
+NOTE = "備註：頁面內圖片已轉為 GitHub Pages 本地 WebP 圖片；「開啟原圖」按鈕仍會連到 Google Drive 原圖。"
+
+
+def load_rows():
+    data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    rows = []
+    for page in data["pages"]:
+        relative = f"products/{page['file']}"
+        rows.append((page["title"], relative, f"{BASE_URL}{relative}"))
+    return rows
+
+
+def build_markdown(rows):
+    lines = [
+        "# 網尚店產品展示頁連結表",
+        "",
+        "以下「Canva 可用完整 Link」可直接貼入 Canva Website。",
+        "",
+        "GitHub Pages 根網址：",
+        "",
+        "```text",
+        BASE_URL,
+        "```",
+        "",
+        "| 產品系列 | 頁面檔案 | 相對 Link | Canva 可用完整 Link |",
+        "|---|---|---|---|",
+    ]
+    for product, relative, full in rows:
+        lines.append(f"| {product} | `{relative}` | `{relative}` | `{full}` |")
+    lines.extend(["", NOTE, ""])
+    OUTPUT_MD.write_text("\n".join(lines), encoding="utf-8", newline="\n")
 
 
 def set_cell_shading(cell, fill):
@@ -123,7 +150,7 @@ def style_run(run, bold=False, color=None, size=11):
         run.font.color.rgb = RGBColor.from_string(color)
 
 
-def build_doc():
+def build_doc(rows):
     doc = Document()
     section = doc.sections[0]
     section.top_margin = Inches(1)
@@ -172,7 +199,7 @@ def build_doc():
         run = p.add_run(header)
         style_run(run, bold=True, color="1F4D78", size=10)
 
-    for product, relative, full in ROWS:
+    for product, relative, full in rows:
         cells = table.add_row().cells
         values = [product, relative, relative, full]
         for idx, value in enumerate(values):
@@ -193,12 +220,14 @@ def build_doc():
     warning = doc.add_paragraph()
     warning.paragraph_format.space_before = Pt(10)
     warning.paragraph_format.space_after = Pt(0)
-    run = warning.add_run("備註：頁面內圖片使用 Google Drive 圖片縮圖連結。正式公開前，請確保原 Drive 圖片或上層 folder 已設定為「知道連結的任何人均可查看」。")
+    run = warning.add_run(NOTE)
     style_run(run, color="65758B", size=9.5)
 
-    doc.save(OUTPUT)
+    doc.save(OUTPUT_DOCX)
 
 
 if __name__ == "__main__":
-    build_doc()
-    print(OUTPUT)
+    rows = load_rows()
+    build_markdown(rows)
+    build_doc(rows)
+    print(OUTPUT_DOCX)
