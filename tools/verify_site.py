@@ -21,6 +21,10 @@ def main():
 
     for page in data["pages"]:
         page_count += 1
+        for field_name, value in [("title", page["title"]), *[(f"meta[{index}]", item) for index, item in enumerate(page["meta"])]]:
+            if "?" in value:
+                errors.append(f"Placeholder question mark found in {page['file']} {field_name}: {value}")
+
         html_path = ROOT / "products" / page["file"]
         if not html_path.exists():
             errors.append(f"Missing page: {html_path}")
