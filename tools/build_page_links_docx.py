@@ -14,7 +14,7 @@ DATA_PATH = ROOT / "tools" / "product_data.json"
 OUTPUT_DOCX = ROOT / "docs" / "page-links.docx"
 OUTPUT_MD = ROOT / "docs" / "page-links.md"
 
-BASE_URL = "https://jasonwongkwanho.github.io/shine-online-shop-specific-products-pages/"
+BASE_URL = "https://po-kwong.github.io/shine-online-shop-specific-products-pages/"
 NOTE = "備註：頁面內圖片已轉為 GitHub Pages 本地 WebP 圖片；「開啟原圖」按鈕仍會連到 Google Drive 原圖。"
 
 

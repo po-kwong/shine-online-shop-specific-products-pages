@@ -13,7 +13,7 @@ Use `docs/page-links.md` or `docs/page-links.docx` to copy the final page links 
 GitHub Pages root URL:
 
 ```text
-https://jasonwongkwanho.github.io/shine-online-shop-specific-products-pages/
+https://po-kwong.github.io/shine-online-shop-specific-products-pages/
 ```
 
 ## Image Access
