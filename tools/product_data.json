@@ -671,6 +671,20 @@
         { "code": "BGA5_004", "drive_id": "11-klY3klWm78wEk6kDHd2jtXKURr9-Ed" },
         { "code": "BGA5_005", "drive_id": "1w9-D5cPTTFB7drpqrhVRn_5mrOCXLIPS" }
       ]
+    },
+    {
+      "file": "decoupage-tissue-box.html",
+      "folder_id": "1cz7bgfeZa1RvyrsSx64hRzVZcP3UzqbR",
+      "title": "蝶古巴特紙巾盒",
+      "meta": [
+        "共 3 款",
+        "蝶古巴特紙巾盒"
+      ],
+      "items": [
+        { "code": "CB1", "drive_id": "1VZZ2-bpxDqGK-43xTKWng7PHYBlxHiVU" },
+        { "code": "CB2", "drive_id": "1vHpGzrgVR-rc6XD3XbQ8d6GaS14t9Fck" },
+        { "code": "CB3", "drive_id": "1cSTR6jt55mbdpUKbGeSxnxUI3tdWoZxd" }
+      ]
     }
   ]
 }

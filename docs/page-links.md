@@ -21,5 +21,6 @@ https://po-kwong.github.io/shine-online-shop-specific-products-pages/
 | 蝶古巴特髮夾 | `products/decoupage-hair-clip.html` | `products/decoupage-hair-clip.html` | `https://po-kwong.github.io/shine-online-shop-specific-products-pages/products/decoupage-hair-clip.html` |
 | 蝶古巴特麻布袋_A4 | `products/decoupage-a4-bag.html` | `products/decoupage-a4-bag.html` | `https://po-kwong.github.io/shine-online-shop-specific-products-pages/products/decoupage-a4-bag.html` |
 | 蝶古巴特麻布袋_A5 | `products/decoupage-a5-bag.html` | `products/decoupage-a5-bag.html` | `https://po-kwong.github.io/shine-online-shop-specific-products-pages/products/decoupage-a5-bag.html` |
+| 蝶古巴特紙巾盒 | `products/decoupage-tissue-box.html` | `products/decoupage-tissue-box.html` | `https://po-kwong.github.io/shine-online-shop-specific-products-pages/products/decoupage-tissue-box.html` |
 
 備註：頁面內圖片已轉為 GitHub Pages 本地 WebP 圖片；「開啟原圖」按鈕仍會連到 Google Drive 原圖。
